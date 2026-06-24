@@ -1,4 +1,5 @@
 import type { SdkStore } from '../../lib/Sendbird/types';
+import { SUPER_GROUP_CHANNEL } from '../../utils/consts';
 
 export const isBroadcastChannelEnabled = (sdk: SdkStore['sdk']): boolean => {
   const ALLOW_BROADCAST_CHANNEL = 'allow_broadcast_channel';
@@ -12,11 +13,10 @@ export const isBroadcastChannelEnabled = (sdk: SdkStore['sdk']): boolean => {
 };
 
 export const isSuperGroupChannelEnabled = (sdk: SdkStore['sdk']): boolean => {
-  const ALLOW_SUPER_GROUP_CHANNEL = 'allow_super_group_channel';
-  const applicationAttributes = sdk?.appInfo?.applicationAttributes;
+  const premiumFeatureList = sdk?.appInfo?.premiumFeatureList;
 
-  if (Array.isArray(applicationAttributes)) {
-    return applicationAttributes.includes(ALLOW_SUPER_GROUP_CHANNEL);
+  if (Array.isArray(premiumFeatureList)) {
+    return premiumFeatureList.includes(SUPER_GROUP_CHANNEL);
   }
 
   return false;

@@ -34,8 +34,9 @@ export const META_ARRAY_VOICE_DURATION_KEY = 'KEY_VOICE_MESSAGE_DURATION';
 export const META_ARRAY_MESSAGE_TYPE_KEY = 'KEY_INTERNAL_MESSAGE_TYPE';
 export const META_ARRAY_MESSAGE_TYPE_VALUE__VOICE = 'voice/mp3';
 
-// delivery receipt in feature list
+// premium feature list keys (appInfo.premiumFeatureList)
 export const DELIVERY_RECEIPT = 'delivery_receipt';
+export const SUPER_GROUP_CHANNEL = 'super_group_channel';
 
 // file viewer slider
 export const SLIDER_BUTTON_ICON_SIDE_LENGTH = '32px';
