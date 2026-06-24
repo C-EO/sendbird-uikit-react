@@ -1,5 +1,9 @@
 # Changelog - v3
 
+## [v3.18.1] (JUN 24 2026)
+### Fixes
+- Fixed super group channel detection to use the application's `premiumFeatureList` instead of the deprecated `allow_super_group_channel` attribute
+
 ## [v3.18.0] (MAY 27 2026)
 ### Features
 - Redesigned the message composer's file attachment flow
